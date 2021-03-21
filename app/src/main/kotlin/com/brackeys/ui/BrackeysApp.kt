@@ -14,15 +14,10 @@
  * limitations under the License.
  */
 
-package com.brackeys.ui.editorkit
+package com.brackeys.ui
 
-import org.junit.Assert.*
-import org.junit.Test
+import android.app.Application
+import dagger.hilt.android.HiltAndroidApp
 
-class ExampleUnitTest {
-
-    @Test
-    fun addition_isCorrect() {
-        assertEquals(4, 2 + 2)
-    }
-}
+@HiltAndroidApp
+class BrackeysApp : Application()

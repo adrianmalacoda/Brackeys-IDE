@@ -116,6 +116,10 @@ dependencies {
     implementation project(':data')
     implementation project(':editorkit')
 
+    implementation project(':common:uikit')
+
+    implementation project(':features:feature-fonts')
+
     implementation project(':filesystems:filesystem-base')
     implementation project(':languages:language-base')
 

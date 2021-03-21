@@ -14,10 +14,24 @@
  * limitations under the License.
  */
 
-package com.brackeys.ui
+plugins {
+    id 'com.android.library'
+}
 
-import android.app.Application
-import dagger.hilt.android.HiltAndroidApp
+android {
+    compileSdkVersion versions.compileSdk
+    buildToolsVersion versions.buildTools
 
-@HiltAndroidApp
-class MainApplication : Application()
+    defaultConfig {
+        minSdkVersion versions.minSdk
+        targetSdkVersion versions.targetSdk
+    }
+}
+
+dependencies {
+
+    // UI
+    implementation library.appcompat
+    implementation library.materialdesign
+    implementation library.materialdialogs_core
+}
