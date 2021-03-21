@@ -45,7 +45,7 @@ object DataModule {
     @Singleton
     @Named("Local")
     fun provideLocalFilesystem(): Filesystem {
-        return FilesystemDelegate.provideFilesystem(File("/"))
+        return FilesystemDelegate.provideFilesystem(File("/storage"))
     }
 
     @Provides
