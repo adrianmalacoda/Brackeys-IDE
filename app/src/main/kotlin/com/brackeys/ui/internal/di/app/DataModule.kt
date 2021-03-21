@@ -29,6 +29,7 @@ import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
 import javax.inject.Named
 import javax.inject.Singleton
+import java.io.File
 
 @Module
 @InstallIn(SingletonComponent::class)
@@ -44,7 +45,7 @@ object DataModule {
     @Singleton
     @Named("Local")
     fun provideLocalFilesystem(): Filesystem {
-        return FilesystemDelegate.provideFilesystem(Environment.getExternalStorageDirectory())
+        return FilesystemDelegate.provideFilesystem(new File("/"))
     }
 
     @Provides
